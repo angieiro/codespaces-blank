@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/codespaces-blank/codespaces-blank/codespaces-blank.csproj": {}
+    "/workspaces/codespaces-blank/codespaces-blank.csproj": {}
   },
   "projects": {
-    "/workspaces/codespaces-blank/codespaces-blank/codespaces-blank.csproj": {
+    "/workspaces/codespaces-blank/codespaces-blank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/codespaces-blank/codespaces-blank/codespaces-blank.csproj",
+        "projectUniqueName": "/workspaces/codespaces-blank/codespaces-blank.csproj",
         "projectName": "codespaces-blank",
-        "projectPath": "/workspaces/codespaces-blank/codespaces-blank/codespaces-blank.csproj",
+        "projectPath": "/workspaces/codespaces-blank/codespaces-blank.csproj",
         "packagesPath": "/home/codespace/.nuget/packages/",
-        "outputPath": "/workspaces/codespaces-blank/codespaces-blank/obj/",
+        "outputPath": "/workspaces/codespaces-blank/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/codespace/.nuget/NuGet/NuGet.Config"
