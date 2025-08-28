@@ -12,59 +12,62 @@ public class CollectionsPractice
 
   public static void CollectionsPracticeMain(String[] args)
   {
-    int val1 = Convert.ToInt32(Console.ReadLine());
-    int val2 = Convert.ToInt32(Console.ReadLine());
-    int sum = solveMeFirst(val1, val2);
-    Console.WriteLine(sum);
+    // int val1 = Convert.ToInt32(Console.ReadLine());
+    // int val2 = Convert.ToInt32(Console.ReadLine());
+    // int sum = solveMeFirst(val1, val2);
+    // Console.WriteLine(sum);
 
-    // Step 1: Create a list of student names
-    List<string> students = new List<string> { "Alice", "Bob", "Charlie" };
+    // // Step 1: Create a list of student names
+    // List<string> students = new List<string> { "Alice", "Bob", "Charlie" };
 
-    // Step 2: Create a dictionary for student grades
-    Dictionary<string, int> grades = new Dictionary<string, int> {
-      { "Alice", 85 },
-      { "Bob", 92 },
-      { "Charlie", 78 }
-    };
+    // // Step 2: Create a dictionary for student grades
+    // Dictionary<string, int> grades = new Dictionary<string, int> {
+    //   { "Alice", 85 },
+    //   { "Bob", 92 },
+    //   { "Charlie", 78 }
+    // };
 
-    // Step 3: Print all students with grades
-    Console.WriteLine("Student Grades:");
-    foreach (var student in students)
-    {
-      if (grades.ContainsKey(student))
-      {
-        Console.WriteLine($"{student}: {grades[student]}");
-      }
-      else
-      {
-        Console.WriteLine($"{student}: No grade found");
-      }
-    }
+    // // Step 3: Print all students with grades
+    // Console.WriteLine("Student Grades:");
+    // foreach (var student in students)
+    // {
+    //   if (grades.ContainsKey(student))
+    //   {
+    //     Console.WriteLine($"{student}: {grades[student]}");
+    //   }
+    //   else
+    //   {
+    //     Console.WriteLine($"{student}: No grade found");
+    //   }
+    // }
 
-    // Step 4: Find the highest grade
-    int highest = int.MinValue;
-    string topStudent = "";
-    foreach (var kvp in grades)
-    {
-      if (kvp.Value > highest)
-      {
-        highest = kvp.Value;
-        topStudent = kvp.Key;
-      }
-    }
-    Console.WriteLine($"\nHighest grade: {topStudent} ({highest})");
+    // // Step 4: Find the highest grade
+    // int highest = int.MinValue;
+    // string topStudent = "";
+    // foreach (var kvp in grades)
+    // {
+    //   if (kvp.Value > highest)
+    //   {
+    //     highest = kvp.Value;
+    //     topStudent = kvp.Key;
+    //   }
+    // }
+    // Console.WriteLine($"\nHighest grade: {topStudent} ({highest})");
 
-    // Step 5: Ask user for a student's grade
-    Console.Write("\nEnter a student's name: ");
-    string name = Console.ReadLine();
-    if (grades.ContainsKey(name))
-    {
-      Console.WriteLine($"{name}'s grade: {grades[name]}");
-    }
-    else
-    {
-      Console.WriteLine("Student not found.");
-    }
+    // // Step 5: Ask user for a student's grade
+    // Console.Write("\nEnter a student's name: ");
+    // string name = Console.ReadLine();
+    // if (grades.ContainsKey(name))
+    // {
+    //   Console.WriteLine($"{name}'s grade: {grades[name]}");
+    // }
+    // else
+    // {
+    //   Console.WriteLine("Student not found.");
+    // }
+    string s = "anagram";
+    string t = "nagaram";
+    Console.WriteLine($"Is Anagram: {CollectionsPractice.IsAnagram(s, t)}");
   }
 
 
@@ -104,5 +107,48 @@ public class CollectionsPractice
     return res;
     //Best: 
     // return x.Aggregate((p, next) => p * next);
+  }
+
+  //Valid Anagram Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+  public static bool IsAnagram(string s, string t)
+  {
+    List<Char> scheck = s.ToList();
+    bool isValidAnagram = true;
+    foreach (Char letter in t)
+    {
+      if (scheck.Count() > 0 && scheck.Contains(letter))
+      {
+        Console.WriteLine(letter);
+        scheck.Remove(letter);
+      }
+      else return false;
+    }
+    return isValidAnagram && scheck.Count() == 0;
+    
+    //***** Better ****//if (s.Length != t.Length) return false;
+
+    // var sChars = s.ToLower().OrderBy(c => c).ToArray();
+    // var tChars = t.ToLower().OrderBy(c => c).ToArray();
+
+    // return sChars.SequenceEqual(tChars);
+    //***** Best ****//
+    // if (s.Length != t.Length) return false;
+
+    // var count = new Dictionary<char, int>();
+
+    // foreach (char c in s)
+    // {
+    //     if (!count.ContainsKey(c)) count[c] = 0;
+    //     count[c]++;
+    // }
+
+    // foreach (char c in t)
+    // {
+    //     if (!count.ContainsKey(c)) return false;
+    //     count[c]--;
+    //     if (count[c] < 0) return false;
+    // }
+
+    // return true;
   }
 }
