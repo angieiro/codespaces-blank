@@ -1,24 +1,47 @@
-# codespaces-blank
+# C# Practice Projects
 
-This project is a C# application that demonstrates basic arithmetic operations and the management of student grades using collections.
+This repository contains a collection of C# practice files and mini-projects, each demonstrating different aspects of C# programming, including collections, LINQ, and object-oriented design.
 
-## Project Structure
+## Contents
 
-- **Phase 1/CollectionsPractice.cs**: Contains the `CollectionsPractice` class with methods for solving a simple addition problem, printing student grades, finding the highest grade, and retrieving a student's grade based on user input.
-  
-- **Program.cs**: The entry point of the application, containing the `Main` method where program execution begins.
+### Phase 1
 
-- **codespaces-blank.csproj**: The project file that includes configuration settings, references to dependencies, and build settings for the C# application.
+- **CollectionsPractice.cs**  
+  Practice with C# collections (`List`, `Dictionary`), simple algorithms, and user input/output.  
+  - Add two numbers from user input.
+  - Manage a list of students and their grades.
+  - Find the highest grade.
+  - Query a student's grade.
+  - Count digit occurrences in squares of numbers.
+  - Multiply all elements in an array.
 
-## Usage
+- **TopCustomersBySpend.cs**  
+  Demonstrates LINQ usage to find the top 3 customers by their total order amount.  
+  - Defines `Customer` and `Order` classes.
+  - Uses LINQ to aggregate and sort customer spending.
 
-1. Open the project in a C# compatible IDE or editor.
-2. Build the project to restore dependencies.
-3. Run the application to interact with the student grades functionality.
+- **HotelBookingSystem.cs**  
+  A simple object-oriented hotel booking system.  
+  - Defines `Room`, `StandardRoom`, `DeluxeRoom`, and `Booking` classes.
+  - Allows adding rooms, booking rooms, and displaying available rooms.
+  - Demonstrates inheritance and encapsulation.
 
-## Features
+## How to Run
 
-- Addition of two integers.
-- Management of student names and grades using a list and a dictionary.
-- Ability to find and display the highest grade among students.
-- User input functionality to retrieve a specific student's grade.
+1. **Ensure you have the .NET SDK installed (version 8.0 or later).**
+2. **Build and run the project:**
+   ```sh
+   dotnet run
+   ```
+   Or, to run a specific file, set its entry point as the `Main` method in your project.
+
+3. **Edit or explore the code in Visual Studio Code for learning and experimentation.**
+
+## Requirements
+
+- .NET 8.0 SDK or later
+- Visual Studio Code (recommended) with the C# extension
+
+---
+
+Feel free to explore and modify the code to enhance your understanding of C#!
