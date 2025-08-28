@@ -91,4 +91,18 @@ public class CollectionsPractice
     //           .Select(i => (i * i).ToString())
     //           .Sum(sq => sq.Count(c => c == (char)(d + '0')));
   }
+
+  //Given a non-empty array of integers, return the result of multiplying the values together in order. 
+  public static int Grow(int[] x)
+  {
+    int res = 1;
+    foreach (int num in x)
+    {
+      res = res * num;
+    }
+    Console.WriteLine($"The result is : {res}");
+    return res;
+    //Best: 
+    // return x.Aggregate((p, next) => p * next);
+  }
 }
